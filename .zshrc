@@ -14,6 +14,6 @@ compinit
 # End of lines added by compinstall
 
 # load aliases
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
