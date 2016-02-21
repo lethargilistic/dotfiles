@@ -55,19 +55,6 @@ set whichwrap+=h,l
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
 
-" Move up/down editor lines
-nnoremap j gj
-nnoremap k gk
-
-" Disallow the arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
 
 " Allow hidden buffers
 set hidden
@@ -94,13 +81,6 @@ set showmatch
 set mat=2
 map <leader><space> :let @/=''<cr> " clear search
 
-" Remap help key.
-inoremap <F1> <ESC>:set invfullscreen<CR>a
-nnoremap <F1> :set invfullscreen<CR>
-vnoremap <F1> :set invfullscreen<CR>
-
-" Textmate holdouts
-
 " Formatting
 map <leader>q gqip
 
@@ -121,5 +101,32 @@ set wildmenu
 " regex
 set magic
 
+" ########### Remappings #################
+
 " show visual mode highlight when jumping to matching brace
 noremap % v%
+
+" Remap help key.
+inoremap <F1> <ESC>:set invfullscreen<CR>a
+nnoremap <F1> :set invfullscreen<CR>
+vnoremap <F1> :set invfullscreen<CR>
+
+" Move up/down editor lines
+nnoremap j gj
+nnoremap k gk
+
+" Disallow the arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
+" Compensating for holding the shift key too long 
+:command Q q
+:command Wq wq
+:command W w
+:command Q q
