@@ -39,7 +39,7 @@ set encoding=utf-8
 set ai
 set si
 set wrap
-set textwidth=79
+set textwidth=80
 set formatoptions=tcqrn1
 set tabstop=4
 set shiftwidth=4
@@ -101,6 +101,9 @@ set wildmenu
 " regex
 set magic
 
+" Spell checking
+:setlocal spell spelllang=en_us
+
 " ########### Remappings #################
 
 " show visual mode highlight when jumping to matching brace
@@ -125,8 +128,12 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
+" Enable this up and down for autocompletion reasons
+inoremap <S-Up> <Up>
+inoremap <S-Down> <Down>
+
 " Compensating for holding the shift key too long 
-:command Q q
+:command WQ wq
 :command Wq wq
 :command W w
 :command Q q
