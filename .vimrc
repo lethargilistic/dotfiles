@@ -137,3 +137,9 @@ inoremap <S-Down> <Down>
 :command Wq wq
 :command W w
 :command Q q
+
+" Relative Numbering, enter and leave automatically
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
