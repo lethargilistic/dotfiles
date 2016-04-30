@@ -8,6 +8,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 " Turn on syntax highlighting
