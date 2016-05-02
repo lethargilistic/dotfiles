@@ -107,9 +107,6 @@ set magic
 
 " ########### Remappings #################
 
-" show visual mode highlight when jumping to matching brace
-noremap % v%
-
 " Remap help key.
 inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
@@ -134,13 +131,16 @@ inoremap <S-Up> <Up>
 inoremap <S-Down> <Down>
 
 " Compensating for holding the shift key too long 
-:command WQ wq
-:command Wq wq
-:command W w
-:command Q q
+:command! WQ wq
+:command! Wq wq
+:command! W w "remember this is for the : commands, not vi commands
+:command! Q q
 
-" Relative Numbering, enter and leave automatically
-:au FocusLost * :set number
-:au FocusGained * :set relativenumber
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+" Wrapping text easier. Less need for ex mode
+:noremap Q gq
+
+" Relative Numbering, enter and leave automatically. Toggle not working?
+":au FocusLost * :set number
+":au FocusGained * :set relativenumber
+":au InsertEnter * :set number
+":au InsertLeave * :set relativenumber
