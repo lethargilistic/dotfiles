@@ -104,6 +104,10 @@ set magic
 
 " Spell checking
 :setlocal spell spelllang=en_us
+hi SpellBad ctermfg=Red ctermbg=White
+hi SpellCap ctermfg=Blue ctermbg=White
+hi SpellLocal ctermfg=DarkBlue ctermbg=White
+hi SpellRare ctermfg=Magenta ctermbg=White
 
 " ########### Remappings #################
 
