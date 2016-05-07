@@ -40,6 +40,7 @@ set encoding=utf-8
 set ai
 set si
 set wrap
+set sidescroll=1
 set textwidth=80
 set formatoptions=tcqrn1
 set tabstop=4
@@ -130,9 +131,8 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
-" Enable this up and down for autocompletion reasons
-inoremap <S-Up> <Up>
-inoremap <S-Down> <Down>
+" Avoiding auto-unindent for # comments. Thanks, indigo945~!
+inoremap # x<BS>#
 
 " Compensating for holding the shift key too long 
 :command! WQ wq
@@ -148,3 +148,6 @@ inoremap <S-Down> <Down>
 ":au FocusGained * :set relativenumber
 ":au InsertEnter * :set number
 ":au InsertLeave * :set relativenumber
+
+" Start in a new file with everything folded. Thanks, wincent~!
+set foldlevelstart=1
