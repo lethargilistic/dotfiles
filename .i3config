@@ -50,6 +50,9 @@ bindsym Mod1+$down focus down
 bindsym Mod1+$up focus up
 bindsym Mod1+$right focus right
 
+# No mouse-following focus
+focus_follows_mouse no
+
 # move focused window
 bindsym Mod1+Shift+$left move left
 bindsym Mod1+Shift+$down move down
