@@ -78,6 +78,6 @@ autoload -Uz compinit
 compinit
 
 # load aliases
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+if [ -f ~/.dotfiles/.aliases ]; then
+    . ~/.dotfiles/.aliases
 fi
