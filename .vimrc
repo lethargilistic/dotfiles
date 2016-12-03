@@ -9,6 +9,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 " Turn on syntax highlighting
@@ -104,7 +105,7 @@ set wildmenu
 set magic
 
 " Spell checking
-:setlocal spell spelllang=en_us
+:setlocal spell spelllang=en_us,cjk
 hi SpellBad ctermfg=Red ctermbg=White
 hi SpellCap ctermfg=Blue ctermbg=White
 hi SpellLocal ctermfg=DarkBlue ctermbg=White
@@ -151,3 +152,15 @@ inoremap # x<BS>#
 
 " Start in a new file with everything folded. Thanks, wincent~!
 set foldlevelstart=1
+
+" From map.txt, this eats a character. I use this for expanding abbreviations
+" ending with (
+func Eatchar(pat)
+   let c = nr2char(getchar(0))       
+   return (c =~ a:pat) ? '' : c      
+endfunc
+
+" Useful abbreviations
+
+" For Rust
+iabbrev pl println!(<C-R>=Eatchar('\s')<CR>
