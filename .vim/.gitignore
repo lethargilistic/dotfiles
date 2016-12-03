@@ -1,0 +1,5 @@
+*.swp
+.netrwhist
+bundle/*/doc/tags
+bundle/.vundle/script-names.vim-scripts.org.json
+doc/*

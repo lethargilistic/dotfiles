@@ -1,0 +1,15 @@
+[submodule ".vim/bundle/emmet-vim"]
+	path = .vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim
+[submodule ".vim/bundle/python-imports.vim"]
+	path = .vim/bundle/python-imports.vim
+	url = https://github.com/phillipberndt/python-imports.vim
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim
+[submodule ".vim/bundle/sort-python-imports"]
+	path = .vim/bundle/sort-python-imports
+	url = https://github.com/vim-scripts/sort-python-imports
+[submodule ".vim/bundle/Vundle.vim"]
+	path = .vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim
