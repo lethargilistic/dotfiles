@@ -7,7 +7,7 @@ alias l='ls -CF'
 eval $(thefuck --alias)
 
 #Python virtualenv createion
-alias createvenv='virtualenv -p python3 venv;source venv/bin/activate'
+alias createvenv='virtualenv -p /usr/bin/python3 venv;source venv/bin/activate;echo "*" > venv/.gitignore'
 #Python virtualenv activation
-alias venv='venv/bin/activate'
+alias venv='source venv/bin/activate'
 
