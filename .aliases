@@ -1,3 +1,6 @@
+# Python 3!
+alias python=python3.6
+
 # ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -6,8 +9,11 @@ alias l='ls -CF'
 # thefuck alias
 eval $(thefuck --alias)
 
-#Python virtualenv createion
-alias createvenv='virtualenv -p /usr/bin/python3 venv;source venv/bin/activate;echo "*" > venv/.gitignore'
+#Python virtualenv creation
+alias createvenv='virtualenv -p /usr/bin/python3.6 venv;source venv/bin/activate;echo "*" > venv/.gitignore'
 #Python virtualenv activation
 alias venv='source venv/bin/activate'
 
+# Monaural sound because I can't hear with my left ear
+# Note the specific headphones are mentioned in the command.
+alias mono='pacmd load-module module-remap-sink sink_name=mono master=bluez_sink.FC_58_FA_60_46_20.a2dp_sink channels=4 channel_map=left,right,left,right master_channel_map=left,left,right,right'
